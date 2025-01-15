@@ -39,6 +39,10 @@ $(document).ready(
                         };
                     } 
                 }     
+                // if kaggle parent.postMessage(["notify", "message"], "*");
+                if (window.location.hostname === 'kkb-production.jupyter-proxy.kaggle.net') {
+                    parent.postMessage(["notify", notificationPayload], "*");
+                }
             }
         }
     }
